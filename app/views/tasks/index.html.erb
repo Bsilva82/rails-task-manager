@@ -1,4 +1,6 @@
 <h1>My tasks</h1>
 <% @tasks.each do |task| %>
-  <p><%= link_to "#{task.title}", tasks_path(task) %></p>
+  <%= link_to task do %> <%# affiche le lien et le lien prend comme nom le task.title %>
+  <p><%= task.title %></p>
+<% end %>
 <% end %>
